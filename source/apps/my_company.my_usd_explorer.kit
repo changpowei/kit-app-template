@@ -102,10 +102,12 @@ template_name = "omni.usd_explorer"
 "omni.usd.schema.metrics.assembler" = {}
 "omni.warp.core" = {}
 "usdrt.scenegraph" = {}
+"omni.kit.stage_column.variant" = {}
+"omni.kit.variant.presenter" = {}
+"omni.kit.window.commands" = {}
 "my_company.my_python_ui_extension" = {}
 "my_company.my_usd_explorer_setup_extension" = { order = 10000 }  # This is your application setup Extensions. order = 10000 makes it run last
-"omni.kit.stage_column.variant" = {}
-"omni.kit.window.commands" = {}
+"omni.physx.bundle" = {}
 
 [dependencies."filter:platform"."windows-x86_64"]
 "omni.kit.window.modifier.titlebar" = {version = "=107.0.1"}  # Use exact version to avoid supported target platform check
@@ -117,6 +119,7 @@ template_name = "omni.usd_explorer"
 [settings.app]
 name = "My USD Explorer"
 fastShutdown = true  # Fast shutdown by default
+
 
 [settings.app.content]
 emptyStageOnStart = true # This will create a stage during the startup process.
@@ -411,7 +414,7 @@ widgetScale = 0.7
 include_approve_mode = false
 include_file_menu = true
 include_modify_mode = true
-include_present_mode = false
+include_present_mode = true
 include_render_modes  = false
 switch_to_present_on_open = false
 
@@ -609,7 +612,7 @@ enabled = true
 
 [settings.rtx.hydra]
 minFreeDeviceMemory = 3000
-readTransformsFromFabricInRenderDelegate = true
+readTransformsFromFabricInRenderDelegate = false  # Disabled for PhysX compatibility (read transforms from USD instead of Fabric)
 
 [settings.rtx.newDenoiser]
 enabled = true

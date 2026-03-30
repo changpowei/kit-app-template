@@ -40,3 +40,4 @@ deps/**/user.toml
 
 # claude code configs
 .claude/**
+.gstack/
