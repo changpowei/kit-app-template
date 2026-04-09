@@ -41,3 +41,6 @@ deps/**/user.toml
 # claude code configs
 .claude/**
 .gstack/
+
+# Replicator output
+output/

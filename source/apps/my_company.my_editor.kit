@@ -68,6 +68,8 @@ template_name = "kit_base_editor"
 "omni.usd.schema.metrics.assembler" = {}
 "omni.warp.core" = {} # Warp support
 "omni.kit.tool.measure" = { version = "200.0.5" }
+"omni.kit.browser.sample" = { version = "1.4.9" }
+"omni.kit.browser.asset" = {} # NVIDIA Asset Browser
 
 
 [settings.persistent.app]
@@ -89,6 +91,10 @@ telemetry.disableInternalSessionCheck = true
 telemetry.enableAnonymousAppName = true
 telemetry.enableAnonymousData = true
 privacy.externalBuild = true
+
+[settings.exts."omni.kit.browser.sample"]
+folders = ["https://omniverse-content-production.s3.us-west-2.amazonaws.com/Usd_Explorer/Samples/Examples/2023_2",]
+folders_hide_in_category = ["2023_2",]
 
 
 [settings.app]
